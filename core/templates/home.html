@@ -1,9 +1,26 @@
 {% extends "base.html" %} 
 {% block content %}
-<section class="h-screen bg-[url('/static/img/hero_area_image.jpg')] flex items-center">
-  <div class="px-20">
-    <h1 class="italic text-4xl text-teal-300 font-bold">Find Your Next Experience</h1>
-    <h2 class="text-8xl leading-tight font-bold text-white">Discover & Promote </br> Upcoming Event</h2>
+<section class="h-screen bg-[url('/static/img/hero_area_image.jpg')] bg-cover bg-center bg-no-repeat flex items-center ">
+  <div class="px-20 flex flex-col gap-10 mt-28">
+    <div>
+      <h1 class="italic text-4xl text-teal-300 font-bold">Find Your Next Experience</h1>
+      <h2 class="text-7xl leading-tight font-bold text-white">Discover & Promote </br> Upcoming Event</h2>
+    </div>
+
+    <div>
+      <form action="" class="bg-white p-6 rounded-xl border-b-8 border-blue-700/30 ">
+        <input name="event" placeholder="Search Event" class="text-lg outline-none px-5 py-3 border-r-2" type="text">
+        <input name="location" placeholder="Search Location" class="text-lg outline-none px-5 py-3 border-r-2" type="text">
+        <input name="category" placeholder="Category" class="text-lg outline-none px-5 py-3 " type="text">
+        <button class="bg-blue-800 text-white px-7 py-3 rounded-lg font-bold" type="button">Search</button>
+      </form>
+    </div>
+
   </div>
 </section>
+
+<section>
+  {% include "upcomming_event.html" %}
+</section>
+
 {% endblock %}
