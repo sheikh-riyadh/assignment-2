@@ -1,6 +1,23 @@
-<section class="my-20">
+<section class="my-20 px-20 flex flex-col gap-10">
     <div class="text-center flex flex-col gap-3">
-        <h2 class="italic text-xl">Upcomming events</h2>
+        <h2 class="italic text-2xl text-pink-600 font-semibold">Upcomming events</h2>
         <h2 class="text-5xl font-bold">Featured Events</h2>
+    </div>
+    <div class="grid grid-cols-3 gap-5">
+        {% for number in "123456"  %}
+            <div class="border rounded-lg overflow-hidden cursor-pointer hover:shadow-md duration-300">
+                <div>
+                    <img src="https://demo-themewinter.com/eventplace/wp-content/uploads/2022/12/event_image_4-750x386.jpg" alt="event">
+                </div>
+                <div class="p-5">
+                    <h2 class="text-2xl font-semibold hover:text-pink-600">Entomology International Congress of Vancouver</h2>
+                    <div class="mt-5 flex items-center justify-between">
+                        <span class="text-xl">Fri, 05 Sep 2025</span>
+                        <button class="uppercase px-6 py-2 border-4 rounded-lg border-blue-700 hover:bg-blue-700 hover:text-white duration-300">buy now</button>
+                    </div>
+                    
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </section>
