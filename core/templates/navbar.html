@@ -1,4 +1,4 @@
-<header class="p-5 w-full absolute flex items-center justify-between">
+<header class="p-5 w-full  flex items-center justify-between {% if request.path == '/' %}bg-transparent absolute {% else %} bg-[#38065b] {% endif %}">
   <div>
     <img class="w-80" src="/static/img/logo.png" alt="logo" />
   </div>
