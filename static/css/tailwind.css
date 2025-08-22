@@ -23,3 +23,7 @@ html, body{
 .no-spinner {
   -moz-appearance: textfield;
 }
+
+.helptext {
+  display: none;
+}

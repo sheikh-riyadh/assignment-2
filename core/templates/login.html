@@ -9,9 +9,14 @@
   </head>
   <body>
     <section class="h-screen flex flex-col items-center justify-center">
-      <div>
+      <div class="w-[350px] bg-white p-10 border rounded-lg">
         <form action="" method="post">
-          {% include "components/input.html" %}
+            {% csrf_token %}
+            <div class="flex flex-col gap-4">
+              <span class="font-bold text-2xl text-center">Sign-in</span>
+              {{form}}
+              {% include "components/button.html" with text="Sign-in" %}
+            </div>
         </form>
       </div>
     </section>
