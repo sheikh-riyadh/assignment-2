@@ -1,0 +1,7 @@
+{% block dashboard_content %}
+<div class="h-screen w-60 bg-slate-50 px-7">
+    {% for item in data %}
+        <li><a href="{% url item.url %}">{{ item.name }}</a></li>
+    {% endfor %}
+</div>
+{% endblock dashboard_content %}
