@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-in</title>
     <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
     <section class="h-screen flex flex-col items-center justify-center">
@@ -13,8 +14,14 @@
         <form action="" method="post">
             {% csrf_token %}
             <div class="flex flex-col gap-4">
+              <div class="flex flex-col items-center justify-center">
+                <p class="w-12 h-12 border rounded-full flex flex-col items-center justify-center font-bold"><a href="{% url 'home' %}">
+                  <i class="fa-solid fa-house"></i>
+                </a></p>
+              </div>
               <span class="font-bold text-2xl text-center">Sign-in</span>
               {{form}}
+              <span class="text-sm">New here ? <a class="hover:underline text-blue-700" href="{% url "sign-up" %}">Sign-up</a></span>
               {% include "components/button.html" with text="Sign-in" %}
             </div>
         </form>

@@ -1,7 +1,10 @@
 {% block dashboard_content %}
 <div class="h-screen w-60 bg-slate-50 p-7">
     <div class="flex flex-col gap-5">
-        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <div>
+            <i class="fa-brands fa-windows"></i>
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+        </div>
         <a href="{% url 'add-event' %}">Add Event</a>
         <a href="{% url 'add-organizer' %}">Add Organizer</a>
         <a href="{% url 'home' %}">Back To main</a>
